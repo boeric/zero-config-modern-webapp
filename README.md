@@ -14,7 +14,7 @@ ES6, ES2018 and beyond (via Babel, Eslint/Airbnb and various plugins):
 - Generator functions
 - Map/Set objects
 - WeakMap/WeakSet objects
-- Object getters/setter
+- Object getters/setters
 - Optional chaining
 - Etc...
 
