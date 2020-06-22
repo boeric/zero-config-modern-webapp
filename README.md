@@ -120,12 +120,13 @@ async/await works
 1. Properly configured **Sublime** and **VS-Code** editors will pick up the `eslint` and `airbnb` settings and show you lint errors immediately in the editor (btw, the `airbnb` depedency configures `eslint` to much stricter lint rules)
 1. Keep the Webpack dev server running (by using the `start-dev-server` command) while working on your project. You'll see Webpack's **hot reloading** in action, meaning that you won't have to manually reload the app to see code changes as you save them in your editor (as the app is auto-reloaded upon save)
 1. In general while developing the project, make frequent saves and inspect the app as it is being reloaded after each save. Also do frequent git commits (and push to origin)
+1. Modify the **`README.md`** file to describe **your** project
+1. Change the `favicon.ico` image file in the project root to an icon of your liking
 1. Modify the **`./dist/index.html`** file to your needs (but don't change the `script` tag, nor the `license` reference)
 1. Modify the **`./src/index.js`** and **`./src/styles.css`** to your needs. The `./src/module.js` is there only to demonstrate that `import/export` works, so remove it (and the associated test) if not needed. You can/should add other files as your app grows, and those new files need to use `export` of whatever symbols other files need to `import` and use. Please see MDN and other web resources for how `import/export` works
 1. While in development mode, full source maps are produced so you can debug effectively in the browser's debugger (for example setting breakpoints)
-1. When ready to build a **production** bundle, run the command `build-prod`. This will produce a smaller, minified version of the app without source maps etc, which will load faster
+1. When ready to build a **production** bundle, run the command `build-prod`. This will produce a smaller, minified version of the app, which will load faster
 1. To view the production build in action, run the command `start-server`. In it's default configuration, it makes the app available at `http://localhost:8000`
-1. Don't forget to change the `favicon.ico` in the project root to an image of your liking
 
 #### Deployment (to a Linux type system)
 
