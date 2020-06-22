@@ -1,6 +1,6 @@
 ## zero-config-modern-webapp
 
-Zero-config modern front-end web app, with Webpack (bundler), Babel (compiler), Eslint/Airbnb (strict code style linting), Jest (unit tests), and D3 (data visualization) – all **pre-configured** and ready to go. You just add your code! You don't have to configure a thing (except when you want to deploy to different server).
+Zero-config modern front-end web app template, with Webpack (bundler), Babel (compiler), Eslint/Airbnb (strict code style linting), Jest (unit tests), and D3 (data visualization) – all **pre-configured** and ready to go. You just add your code! You don't have to configure a thing (except when you want to deploy to different server).
 
 ### Supported Javascript features
 
