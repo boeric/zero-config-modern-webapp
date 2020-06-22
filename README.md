@@ -75,7 +75,7 @@ Project
 
 1. Make sure that you have recent versions of **`node`** (`node --version`) and **`npm`** (`npm --version`), and optionally `yarn`(`yarn --version`) on your system, see above. If not, find other resources on the web on how to install these command on your system
 1. Decide on a **name** of your new front-end project
-1. Fork this repo and use the new project name for the fork name (see Github instructions, if needed)
+1. Click the green **Use this template** button above and use the **name** for your new the **repository name**, decide on whether to make your repo public or private, then click the green **Create repository from template**, after which your new repository is created on GitHub
 1. Clone the repo to your local system (see Github instructions if needed)
 1. Install the dependencies by running **`npm install`** (or just `yarn`)
 1. To run any of the commands listed below do **`npm run <command>`**, or `yarn <command>` 
