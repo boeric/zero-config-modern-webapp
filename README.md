@@ -4,7 +4,7 @@ Zero-config modern front-end web app template, with Webpack (bundler), Babel (co
 
 ### Supported Javascript features
 
-ES6, ES2018 and beyond (via Babel, Eslint/Airbnb and various plugins):
+ES6, ES2018 and beyond – via Babel (and the syntax is picked up by Sublime/VS Code editors):
 
 - Export/Import
 - Tagged templates
@@ -16,9 +16,19 @@ ES6, ES2018 and beyond (via Babel, Eslint/Airbnb and various plugins):
 - WeakMap/WeakSet objects
 - Object getters/setters
 - Optional chaining
-- Etc...
+- and more...
 
-## Directory structure
+### Awesome Linting
+
+The project template uses a strict, highly disciplined Javascript code style (via Eslint/Airbnb). Please see Airbnb code style defaults [here](https://github.com/airbnb/javascript). When using Eslint/Airbnb, the code style will be virtually in-distinguishable from one developer to another (the code **quality** may be different matter...). By enforcing a strict code style, the "mental friction" of getting into a new project is greatly reduced. 
+
+As you are coding, lint issues show up in real time in **Sublime** and **VS Code** (if properly configured for linting), so you can fix lint errors right then and there. 
+
+In some cases you'll have to override the strict rules, which is easy to do. This template project uses several such overrides.
+
+To do a **lint** check of your project, run the command **`npm run lint`** or **`yarn lint`**.
+
+## Directory Structure
 
 ```
 Project
@@ -65,13 +75,13 @@ Project
 
 ### How to use
 
-#### Required global depencies
+#### Required Global Depencies
 
 - Node: ^14.2.0
 - Npm: ^6.14.4
 - Yarn: ^1.22.4 (it is not required to use Yarn, but it's is a convenient alternative to Npm)
 
-#### Initial steps
+#### Initial Steps
 
 1. Make sure that you have recent versions of **`node`** (`node --version`) and **`npm`** (`npm --version`), and optionally `yarn`(`yarn --version`) on your system, see above. If not, find other resources on the web on how to install these command on your system
 1. Decide on a **name** of your new front-end project
@@ -116,7 +126,7 @@ async/await works
 - Do **`rm -rf node_modules`**
 - Re-install the now-slimmed dependencies by running **`npm install`** (or just `yarn`)
 
-#### Developing your project
+#### Developing Your Project
 
 1. Properly configured **Sublime** and **VS-Code** editors will pick up the `eslint` and `airbnb` settings and show you lint errors immediately in the editor (btw, the `airbnb` depedency configures `eslint` to much stricter lint rules)
 1. Keep the Webpack dev server running (by using the `start-dev-server` command) while working on your project. You'll see Webpack's **hot reloading** in action, meaning that you won't have to manually reload the app to see code changes as you save them in your editor (as the app is auto-reloaded upon save)
