@@ -32,9 +32,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boeric/template-frontend.git"
+    "url": "git+https://github.com/boeric/zero-config-modern-webapp.git"
   },
-  "homepage": "https://github.com/boeric/template-frontend#readme",
+  "homepage": "https://github.com/boeric/zero-config-modern-webapp#readme",
   "dependencies": {
     "@babel/runtime": "^7.10.3",
     "d3": "^5.16.0",
