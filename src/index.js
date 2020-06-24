@@ -1,4 +1,4 @@
-/* eslint-disable no-console, no-plusplus, no-shadow */
+/* eslint-disable no-console */
 
 import 'regenerator-runtime/runtime';
 import './styles.css';
@@ -57,8 +57,8 @@ asyncTest();
   function returnPromise() {
     return Promise.resolve('async/await works');
   }
-  const value = await returnPromise();
-  console.log(value);
+  const awaitValue = await returnPromise();
+  console.log(awaitValue);
 })();
 
 // Test spread
@@ -126,8 +126,8 @@ obj = {
   get string() {
     return this.internal;
   },
-  set newString(value) {
-    this.internal = value;
+  set newString(newValue) {
+    this.internal = newValue;
   },
 };
 console.log(obj.string);
