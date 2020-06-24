@@ -1,7 +1,7 @@
 # .gitignore
 
 # Project files/directories to be ignored
-dist/build.js
+dist/bundle.js
 node_modules/
 
 # OS generated files to be ignored
