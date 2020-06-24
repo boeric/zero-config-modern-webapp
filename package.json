@@ -1,5 +1,5 @@
 {
-  "name": "template-frontend",
+  "name": "zero-config-modern-webapp",
   "version": "1.0.0",
   "description": "Template for front-end app using Webpack, Babel, Eslint & D3 with ES2018 features enabled",
   "main": "index.js",
@@ -13,7 +13,6 @@
     "frontend",
     "no config webapp",
     "pre-config webapp",
-    "template",
     "webpack",
     "zero config webapp",
     "template"
