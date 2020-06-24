@@ -4,18 +4,14 @@
   "description": "Template for front-end app using Webpack, Babel, Eslint & D3 with ES2018 features enabled",
   "main": "index.js",
   "keywords": [
-    "airbnb eslint",
-    "airbnb style",
     "airbnb",
     "babel",
     "eslint",
     "front-end",
     "frontend",
     "no config webapp",
-    "pre-config webapp",
-    "webpack",
-    "zero config webapp",
-    "template"
+    "template",
+    "zero config webapp"
   ],
   "author": "Bo Ericsson <bo@boe.net> (https://boeric.github.io)",
   "license": "See license in LICENSE.txt",
