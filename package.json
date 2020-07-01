@@ -14,7 +14,7 @@
     "zero config webapp"
   ],
   "author": "Bo Ericsson <bo@boe.net> (https://boeric.github.io)",
-  "license": "See license in LICENSE.txt",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "lint": "$(npm bin)/eslint ./src",
