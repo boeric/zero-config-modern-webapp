@@ -1,21 +1,31 @@
 /* eslint-disable no-console */
+// @flow
 
 import 'regenerator-runtime/runtime';
 import './styles.css';
 
 import * as d3 from 'd3';
 
-import a, { nonDefaultExport as b } from './module';
+import a, {
+  nonDefaultExport as b,
+  Aclass,
+} from './module';
 
 // Variables
 let value;
 let obj;
 
-console.log('Testing Babel...');
+console.log('Testing...');
 
-// Test import
+// Test imported functions
 console.log(a());
 console.log(b());
+
+// Test imported class
+const inst0 = new Aclass(1);
+console.log(inst0.methodA('test-string'));
+console.log(`class properties work: ${String(inst0.createCount === 1)}`);
+console.log(`static methods work: ${String(Aclass.returnCreateCount() === 1)}`);
 
 // Test template string
 value = 'template string works';
@@ -27,13 +37,13 @@ function tag(strings, t, w) {
 }
 const template = 'template';
 const work = 'work';
-console.log(tag`does tagged ${template} ${work}?`);
+console.log(tag`${template} ${work}?`);
 
 // Test arrow functions
 const arrow = (d) => {
   console.log(d);
 };
-arrow('arrow works');
+arrow('arrow function works');
 
 // Test arrow iife
 (() => {
@@ -90,22 +100,37 @@ set.add('Set works');
 console.log([...set.values()][0]);
 
 // Test WeakMap
-const weakMap = new WeakMap();
-obj = {
+const weakMap0 = new WeakMap();
+const objArr = [{}, {}];
+weakMap0.set(objArr[0], 'value0');
+weakMap0.set(objArr[1], 'value1');
+
+objArr.length = 1; // Remove item 1
+if (weakMap0.has(objArr[0]) && !weakMap0.has(objArr[1])) {
+  console.log('Weakmap does work');
+} else {
+  console.error(`Weakmap does NOT work (${String(weakMap0.has(objArr[1]))})`);
+}
+
+// Test WeakMap 1 (have to do flow overrides here)
+const weakMap1 = new WeakMap();
+const mapObj = {
   key0: {},
   key1: {},
 };
-value = 'WeakMap works';
-weakMap.set(obj.key0, value);
-weakMap.set(obj.key1, '');
-delete obj.key1;
-if (weakMap.get(obj.key1) === undefined) {
-  console.log(weakMap.get(obj.key0));
-} else {
-  console.log('weakmap does NOT work');
+value = 'some value';
+weakMap1.set(mapObj.key0, value);
+weakMap1.set(mapObj.key1, '1');
+// $FlowFixMe
+mapObj.key1 = null;
+// $FlowFixMe
+if (weakMap1.has(mapObj.key1) === true) {
+  console.log('Weakmap does NOT work');
+} else if (weakMap1.get(mapObj.key0) === value) {
+  console.log('Weakmap does work');
 }
 
-// Test WeakSet
+// Test WeakSet (hav to do flow overrides here)
 const weakSet = new WeakSet();
 obj = {
   obj0: {},
@@ -113,6 +138,8 @@ obj = {
 };
 weakSet.add(obj.obj0);
 weakSet.add(obj.obj1);
+
+// $FlowFixMe
 delete obj.obj1;
 if (weakSet.has(obj.obj0) && !weakSet.has(obj.obj1)) {
   console.log('WeakSet works');
@@ -148,4 +175,4 @@ try {
 }
 
 // Test d3
-d3.selectAll('div').text('Hello from index.js and d3!');
+d3.selectAll('div').text(`Hello from index.js and d3! (d3 version ${d3.version})`);

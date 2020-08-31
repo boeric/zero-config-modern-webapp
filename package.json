@@ -1,7 +1,7 @@
 {
   "name": "zero-config-modern-webapp",
-  "version": "1.0.0",
-  "description": "Template for front-end app using Webpack, Babel, Eslint & D3 with ES2018 features enabled",
+  "version": "1.1.0",
+  "description": "Template for front-end app using Webpack, Babel, Eslint, Flow & D3 with ES2018 features enabled",
   "main": "index.js",
   "keywords": [
     "airbnb",
@@ -17,6 +17,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "flow": "flow",
     "lint": "$(npm bin)/eslint ./src",
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
@@ -35,14 +36,16 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.3",
-    "d3": "^5.16.0",
+    "d3": "^6.0.0",
     "http-server": "^0.12.3",
     "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.3",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
+    "@babel/preset-flow": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
@@ -51,6 +54,7 @@
     "eslint": "7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
+    "flow-bin": "^0.132.0",
     "jest": "^26.0.1",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
